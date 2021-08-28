@@ -20,6 +20,9 @@ class PostPage extends StatelessWidget {
                 labelText: "タイトル",
                 hintText: "タイトルを入力して下さい"),
           ),
+          const SizedBox(
+            height: 8,
+          ),
           TextField(
             controller: contentTextController,
             maxLines: null,
@@ -34,14 +37,18 @@ class PostPage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              titleTextController.clear();
+              contentTextController.clear();
+            },
             child: Text('送信'),
             style: ElevatedButton.styleFrom(
+                onPrimary: Colors.black, //押したときの色！！
                 shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(10.0),
-              ),
-            )),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10.0),
+                  ),
+                )),
           ),
         ]),
       ),
