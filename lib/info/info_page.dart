@@ -6,16 +6,16 @@ class InfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('更新履歴'),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            'Ver 0.0.1',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text('stateless初版'),
+        ]),
       ),
-      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Text(
-          'Ver 0.0.1',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        Text('stateless初版'),
-      ]),
     );
   }
 }

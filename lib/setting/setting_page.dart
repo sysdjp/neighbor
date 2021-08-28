@@ -5,6 +5,17 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            'Ver 0.0.9',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text('stateless初版'),
+        ]),
+      ),
+    );
   }
 }
